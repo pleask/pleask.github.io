@@ -3,39 +3,137 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Patrick Leask | Researcher</title>
     <style>
+        :root {
+            --ink: #1f2933;
+            --muted: #5f6c7b;
+            --line: #d9dee7;
+            --accent: #256f8f;
+            --accent-soft: #e6f3f7;
+            --background: #fafafa;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            color: #222;
+            background: var(--background);
+            color: var(--ink);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-size: 17px;
+            line-height: 1.6;
             margin: 0;
-            padding: 0 1rem;
+            padding: 0 1.25rem;
         }
 
         h1, h2, h3, h4, h5, h6 {
-            font-family: "Courier New", monospace;
+            color: var(--ink);
+            font-weight: 650;
+            line-height: 1.2;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration-color: rgba(37, 111, 143, 0.35);
+            text-decoration-thickness: 0.08em;
+            text-underline-offset: 0.18em;
+        }
+
+        a:hover {
+            color: #174d66;
+            text-decoration-color: currentColor;
+        }
+
+        .container {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 3.5rem 0 2.5rem;
         }
 
         header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 2px solid #222;
-            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--line);
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.25rem;
         }
 
         h1 {
-            font-size: 2rem;
-            margin: 0.5rem 0;
+            font-size: clamp(2.2rem, 8vw, 4.25rem);
+            letter-spacing: 0;
+            margin: 0;
         }
 
         section {
-            margin-bottom: 2rem;
+            margin-bottom: 2.75rem;
+        }
+
+        h2 {
+            font-size: 0.82rem;
+            letter-spacing: 0.08em;
+            margin: 0 0 0.75rem;
+            text-transform: uppercase;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            border-top: 1px solid var(--line);
+            padding: 0.9rem 0;
+        }
+
+        li:first-child {
+            border-top: 0;
+        }
+
+        #links ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+        }
+
+        #links li {
+            border: 0;
+            padding: 0;
+        }
+
+        #links a {
+            background: var(--accent-soft);
+            border-radius: 999px;
+            display: inline-flex;
+            padding: 0.35rem 0.75rem;
+            text-decoration: none;
+        }
+
+        .authors {
+            color: var(--muted);
         }
 
         footer {
-            border-top: 2px solid #222;
+            border-top: 1px solid var(--line);
+            color: var(--muted);
+            font-size: 0.9rem;
             padding-top: 1rem;
-            font-size: 0.8rem;
+        }
+
+        @media (max-width: 560px) {
+            body {
+                font-size: 16px;
+                padding: 0 1rem;
+            }
+
+            .container {
+                padding-top: 2rem;
+            }
         }
     </style>
 </head>
@@ -67,6 +165,7 @@
                         Scholar</a></li>
                 <li><a href="https://www.lesswrong.com/users/patrick-leask" target="_blank">LessWrong</a></li>
                 <li><a href="https://www.linkedin.com/in/patrick-leask-632916182/" target="_blank">LinkedIn</a></li>
+            </ul>
         </section>
 
         <section id="publications">
@@ -96,7 +195,7 @@
         </section>
 
         <footer>
-            <p>Site last updated Feburary&nbsp;19, 2026.</p>
+            <p>Site last updated February&nbsp;19, 2026.</p>
         </footer>
     </div>
 </body>
